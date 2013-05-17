@@ -1,0 +1,16 @@
+add x1 x2 DO
+    x0 := x1 + 0;
+    LOOP x2 DO x0 := x0 + 1 END
+END
+
+mult x1 x2 DO
+    LOOP x1 DO x0 := add x0 x2 END
+END
+
+fac x1 DO
+    x0 := x0 + 1;
+    WHILE x1 != 0 DO
+        x0 := mult x0 x1;
+        x1 := x1 - 1
+    END
+END
